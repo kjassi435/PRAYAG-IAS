@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <!-- Favicon (Site Icon) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp">
+    
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="C-jG3fd5XRC7wkbKI4e5nc9X64SF5tVdU9u2e5CPH6k" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMB84X4JRQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZMB84X4JRQ');
+    </script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayag IAS Academy - Best IAS Academy in Uttarakhand</title>
+    <meta name="description" content="Best IAS Academy in Uttarakhand. Expert faculty for UPSC, UKPCS, and Judiciary exam preparation since 2000.">
+    
+    <!-- 1. Load Dependencies (Fonts & Icons) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- 2. Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 3. Configure Tailwind -->
+    <script>
+        tailwind.config = {
+            important: '#prayag-ias-container', 
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#570A15',  
+                            accent: '#C5A059',   
+                            light: '#f9f9f9',
+                            dark: '#1a0508',
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Merriweather"', 'serif'],
+                        sans: ['"Open Sans"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- 4. Custom Styles -->
+    <style>
+        #prayag-ias-container {
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+            width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        #prayag-ias-container a {
+            text-decoration: none !important;
+            box-shadow: none !important;
+        }
+        #prayag-ias-container ul, 
+        #prayag-ias-container ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #prayag-ias-container h1, 
+        #prayag-ias-container h2, 
+        #prayag-ias-container h3, 
+        #prayag-ias-container h4, 
+        #prayag-ias-container h5, 
+        #prayag-ias-container h6 {
+            margin-top: 0;
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+        #prayag-ias-container img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+            box-shadow: none;
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: #C5A059;
+        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] summary ~ * { animation: sweep .3s ease-in-out; }
+        @keyframes sweep {
+            0%    { opacity: 0; transform: translateY(-10px); }
+            100%  { opacity: 1; transform: translateY(0); }
+        }
+        #lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        #lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border-radius: 4px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            object-fit: contain;
+        }
+        #lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            z-index: 10000;
+            line-height: 1;
+        }
+        #lightbox-close:hover {
+            color: #C5A059;
+        }
+        
+        /* Carousel Styles - Both desktop and mobile */
+        .carousel-viewport {
+            overflow: hidden;
+            width: 100%;
+            touch-action: pan-y;
+        }
+        .carousel-track {
+            display: flex;
+            will-change: transform;
+            transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+            min-width: 100%;
+        }
+        .carousel-slide img {
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        /* Current Affairs Styles */
+        .ca-skeleton {
+            height: 56px;
+            border-radius: 8px;
+            background: linear-gradient(90deg, #f1f1f1 25%, #e3e3e3 50%, #f1f1f1 75%);
+            background-size: 200% 100%;
+            animation: caShimmer 1.4s ease-in-out infinite;
+        }
+        @keyframes caShimmer {
+            0%   { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .carousel-dot.active {
+            background-color: white !important;
+            width: 2rem !important;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Prayag IAS Academy",
+      "url": "https://prayagiasacademy.com/",
+      "logo": "https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 82796 90799",
+        "contactType": "customer service",
+        "contactOption": "TollFree",
+        "areaServed": "IN",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://www.facebook.com/prayagiasacademy/",
+        "https://www.instagram.com/prayag_ias_academy/"
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Prayag IAS Academy",
+      "image": "https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp",
+      "@id": "",
+      "url": "https://prayagiasacademy.com/",
+      "telephone": "+91 82796 90799",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "40, Mansinghwala",
+        "addressLocality": "Dehradun",
+        "postalCode": "248001",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.3345816,
+        "longitude": 78.0537813
+      }
+    }
+    </script>
+</head>
+<body>
+
+<div id="prayag-ias-container">
+
+    <!-- Top Bar -->
+    <div class="bg-brand-primary text-white text-sm py-2 border-b border-white/10 hidden md:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex space-x-6">
+                <span><i class="fas fa-phone-alt mr-2 text-brand-accent"></i> +91 82796 90799</span>
+                <span><i class="fas fa-envelope mr-2 text-brand-accent"></i> Info@prayagiasacademy.com</span>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/prayagiasacademy/" target="_blank" class="hover:text-brand-accent transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/prayag_ias_academy/" target="_blank" class="hover:text-brand-accent transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCv0rnbEnMA84nImghmWKGlA" target="_blank" class="hover:text-brand-accent transition"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <a href="https://prayagiasacademy.com/" class="flex items-center space-x-3">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp" onerror="this.src='https://via.placeholder.com/150x50?text=Prayag+IAS'" alt="Prayag IAS Academy Logo" class="h-12 md:h-16 w-auto object-contain">
+                </a>
+                <div class="hidden md:flex space-x-6 items-center font-medium text-sm lg:text-base">
+                    <a href="https://prayagiasacademy.com/" class="text-brand-primary hover:text-brand-accent transition font-bold border-b-2 border-brand-accent">Home</a>
+                    <a href="https://prayagiasacademy.com/about/" class="text-gray-700 hover:text-brand-primary transition">About</a>
+                    <a href="https://prayagiasacademy.com/blog/" class="text-gray-700 hover:text-brand-primary transition">News Updates</a>
+                    <a href="https://prayagiasacademy.com/upsc/" class="text-gray-700 hover:text-brand-primary transition">UPSC</a>
+                    <a href="https://prayagiasacademy.com/ukpcs-j/" class="text-gray-700 hover:text-brand-primary transition">UKPCS (J)</a>
+                    <a href="https://prayagiasacademy.com/pcs/" class="text-gray-700 hover:text-brand-primary transition">PCS</a>
+                    <a href="https://prayagiasacademy.com/contact/" class="bg-brand-accent text-white px-5 py-2 rounded-md hover:bg-yellow-600 transition shadow-sm font-semibold">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-brand-primary text-2xl focus:outline-none p-2">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="flex flex-col p-4 space-y-4 font-medium">
+                <a href="https://prayagiasacademy.com/" class="text-brand-primary font-bold">Home</a>
+                <a href="https://prayagiasacademy.com/about/" class="text-gray-600">About</a>
+                <a href="https://prayagiasacademy.com/blog/" class="text-gray-600">News Updates</a>
+                <a href="https://prayagiasacademy.com/upsc/" class="text-gray-600">UPSC</a>
+                <a href="https://prayagiasacademy.com/ukpcs-j/" class="text-gray-600">UKPCS (J)</a>
+                <a href="https://prayagiasacademy.com/pcs/" class="text-gray-600">PCS</a>
+                <a href="https://prayagiasacademy.com/contact/" class="text-brand-accent font-bold">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel - 5 Slides Total -->
+    <section id="home" class="relative w-full bg-gray-900">
+        
+        <!-- DESKTOP: Carousel with overlay form -->
+        <div class="hidden md:block">
+            <div id="hero-carousel-desktop" class="relative w-full">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" data-carousel-track>
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banner-41-off.jpg-scaled.jpeg" alt="41 Percent Offer Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banner-12-pass.jpg-1-scaled.jpeg" alt="12 Pass Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banne-hin.-eng.jpg-scaled.jpeg" alt="Hindi English Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banner-ukpcs.jpg-scaled.jpeg" alt="UKPCS Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-bannerr-UKPCS-pre.jpg-scaled.jpeg" alt="UKPCS Pre Banner" class="w-full h-auto block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+                <button onclick="goToSlide(0)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 1"></button>
+                <button onclick="goToSlide(1)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 2"></button>
+                <button onclick="goToSlide(2)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 3"></button>
+                <button onclick="goToSlide(3)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 4"></button>
+                <button onclick="goToSlide(4)" class="carousel-dot w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 5"></button>
+            </div>
+            <div class="absolute inset-0 flex items-center justify-end z-10 pointer-events-none">
+                <div class="container mx-auto px-4 h-full flex justify-end items-center">
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-2xl w-full max-w-md pointer-events-auto border-t-4 border-brand-accent fade-in-up" style="animation-delay: 0.4s;">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-brand-primary mb-2">Request Free Counseling</h3>
+                        <p class="text-gray-500 mb-6 text-sm">Speak with our expert mentors today.</p>
+                        <form class="space-y-4" action="https://formspree.io/f/xanjorol" method="POST">
+                            <input type="hidden" name="_cc" value="prayadiasacademyddn@gmail.com">
+                            <input type="hidden" name="_subject" value="Home Page Inquiry">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name</label>
+                                <input type="text" name="full_name" class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brand-primary outline-none transition" placeholder="Enter your name" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number</label>
+                                <input type="tel" name="phone_number" class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brand-primary outline-none transition" placeholder="+91 98765xxxxx" required>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Target Exam</label>
+                                <select name="target_exam" class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brand-primary outline-none transition">
+                                    <option value="UPSC CSE">UPSC CSE (Foundation)</option>
+                                    <option value="UKPCS">UKPCS (State Service)</option>
+                                    <option value="Judiciary">UKPCS (Judiciary)</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="w-full bg-brand-primary text-white font-bold py-3 rounded hover:bg-black transition shadow-lg mt-2">Get Started</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE: Carousel on top, form below -->
+        <div class="md:hidden">
+            <!-- Mobile Carousel -->
+            <div id="hero-carousel-mobile" class="relative w-full">
+                <div class="carousel-viewport" data-carousel-swipe>
+                    <div class="carousel-track" data-carousel-track>
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banner-41-off.jpg-scaled.jpeg" alt="41 Percent Offer Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banner-12-pass.jpg-1-scaled.jpeg" alt="12 Pass Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banne-hin.-eng.jpg-scaled.jpeg" alt="Hindi English Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-banner-ukpcs.jpg-scaled.jpeg" alt="UKPCS Banner" class="w-full h-auto block">
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide">
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/08/prayag-bannerr-UKPCS-pre.jpg-scaled.jpeg" alt="UKPCS Pre Banner" class="w-full h-auto block">
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+                    <button onclick="goToSlide(0)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 1"></button>
+                    <button onclick="goToSlide(1)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 2"></button>
+                    <button onclick="goToSlide(2)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 3"></button>
+                    <button onclick="goToSlide(3)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 4"></button>
+                    <button onclick="goToSlide(4)" class="carousel-dot w-2.5 h-2.5 rounded-full bg-white/50 hover:bg-white transition-all" aria-label="Go to slide 5"></button>
+                </div>
+            </div>
+            
+            <!-- Mobile Form BELOW carousel -->
+            <div class="bg-gray-50 py-8 px-4">
+                <div class="bg-white p-6 rounded-lg shadow-xl max-w-md mx-auto border-t-4 border-brand-accent">
+                    <h3 class="font-serif text-2xl font-bold text-brand-primary mb-2 text-center">Request Free Counseling</h3>
+                    <p class="text-gray-500 mb-6 text-sm text-center">Speak with our expert mentors today.</p>
+                    <form class="space-y-4" action="https://formspree.io/f/xanjorol" method="POST">
+                        <input type="hidden" name="_cc" value="prayadiasacademyddn@gmail.com">
+                        <input type="hidden" name="_subject" value="Home Page Inquiry">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Full Name</label>
+                            <input type="text" name="full_name" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brand-primary outline-none transition" placeholder="Enter your name" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Phone Number</label>
+                            <input type="tel" name="phone_number" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brand-primary outline-none transition" placeholder="+91 98765xxxxx" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Target Exam</label>
+                            <select name="target_exam" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded focus:ring-2 focus:ring-brand-primary outline-none transition">
+                                <option value="UPSC CSE">UPSC CSE (Foundation)</option>
+                                <option value="UKPCS">UKPCS (State Service)</option>
+                                <option value="Judiciary">UKPCS (Judiciary)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-primary text-white font-bold py-3 rounded hover:bg-black transition shadow-lg mt-2">Get Started</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Daily Current Affairs Section -->
+    <section id="current-affairs" class="py-16 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10">
+                <span class="bg-brand-primary/5 text-brand-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Exam Corner</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-4">Daily Current Affairs 2026</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Ten exam-focused updates curated daily from authentic government and news sources. Refreshes automatically at 12:00 AM.</p>
+                <div id="ca-date-badge" class="inline-flex items-center mt-5 bg-brand-primary text-white text-sm font-semibold px-4 py-2 rounded-full shadow">
+                    <i class="fas fa-calendar-day mr-2 text-brand-accent"></i><span>Loading...</span>
+                </div>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-lg border-t-4 border-brand-accent p-4 md:p-8">
+                <div id="ca-sample-note" class="hidden mb-4 flex items-start gap-3 bg-yellow-50 border border-yellow-200 text-yellow-800 text-sm rounded-lg px-4 py-3">
+                    <i class="fas fa-circle-info mt-0.5"></i>
+                    <span>Showing sample entries. Live current affairs will appear automatically once the first scheduled fetch runs at midnight.</span>
+                </div>
+                <ol id="ca-list" class="divide-y divide-gray-100"></ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Downloads Section -->
+    <section class="py-12 bg-white relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="bg-brand-primary/5 text-brand-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Latest Downloads</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-gray-900 mt-4">UPSC 2026 Question Papers</h2>
+                <div class="w-16 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="flex flex-col sm:flex-row justify-center gap-6 items-center">
+                <a href="https://prayagiasacademy.com/wp-content/uploads/2026/05/UPSC-Prelims-Question-Paper-2026-GS-1-Set-B-English.pdf" target="_blank" class="flex items-center justify-center bg-brand-primary text-white px-6 py-4 rounded-lg shadow-md hover:bg-black transition font-semibold group w-full sm:w-auto">
+                    <i class="fas fa-file-pdf text-2xl mr-3 text-red-400 group-hover:text-red-500"></i>
+                    <span>UPSC Prelims Question Paper 2026 GS 1 (Set B) English</span>
+                </a>
+                <a href="https://prayagiasacademy.com/wp-content/uploads/2026/05/UPSC-PRE-GS-2026.pdf" target="_blank" class="flex items-center justify-center bg-brand-primary text-white px-6 py-4 rounded-lg shadow-md hover:bg-black transition font-semibold group w-full sm:w-auto">
+                    <i class="fas fa-file-pdf text-2xl mr-3 text-red-400 group-hover:text-red-500"></i>
+                    <span>UPSC PRE (GS) 2026</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Highlights Bar -->
+    <section class="bg-brand-accent text-white py-6 shadow-md relative z-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center divide-x divide-white/20">
+                <div class="px-2">
+                    <i class="fas fa-university text-2xl mb-2 opacity-80"></i>
+                    <p class="font-bold text-sm md:text-base">Since 2000</p>
+                    <p class="text-xs opacity-80">Legacy of Excellence</p>
+                </div>
+                <div class="px-2">
+                    <i class="fas fa-chalkboard-teacher text-2xl mb-2 opacity-80"></i>
+                    <p class="font-bold text-sm md:text-base">Expert Faculty</p>
+                    <p class="text-xs opacity-80">Personalized Guidance</p>
+                </div>
+                <div class="px-2">
+                    <i class="fas fa-book-reader text-2xl mb-2 opacity-80"></i>
+                    <p class="font-bold text-sm md:text-base">Comprehensive</p>
+                    <p class="text-xs opacity-80">Study Material</p>
+                </div>
+                <div class="px-2">
+                    <i class="fas fa-trophy text-2xl mb-2 opacity-80"></i>
+                    <p class="font-bold text-sm md:text-base">Proven Results</p>
+                    <p class="text-xs opacity-80">Top Selections</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2 relative">
+                    <div class="absolute -top-4 -left-4 w-32 h-32 bg-brand-primary/5 rounded-full z-0"></div>
+                    <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-brand-accent/20 rounded-full z-0"></div>
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-23-at-12.18.02-AM.jpeg" onerror="this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Prayag IAS Director" class="rounded-lg shadow-2xl relative z-10 w-full object-cover h-[450px]">
+                    <div class="absolute bottom-8 left-8 bg-white p-6 rounded-lg shadow-xl z-20 max-w-xs border-l-4 border-brand-accent">
+                        <p class="font-serif text-brand-primary font-bold text-xl italic">"Excellence is not just a goal—it's our tradition."</p>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 space-y-6">
+                    <h4 class="text-brand-accent font-bold uppercase tracking-wider text-sm flex items-center">
+                        <span class="w-8 h-[2px] bg-brand-accent mr-3"></span> About Us
+                    </h4>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900">
+                        Leading Institute for IAS & PCS <br>in Dehradun
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed text-lg">
+                        Established in 2000, Prayag IAS Academy has built a legacy of excellence over more than two decades. We are dedicated to empowering the next generation of civil servants through a holistic approach that combines rigorous academic training with personalized mentorship.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-gray-100 text-brand-primary rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="font-bold text-gray-900">Experienced Team</h5>
+                                <p class="text-sm text-gray-600 mt-1">Former civil servants and subject matter experts.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 bg-yellow-50 text-brand-accent rounded-full flex items-center justify-center mt-1">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h5 class="font-bold text-gray-900">Innovative Methods</h5>
+                                <p class="text-sm text-gray-600 mt-1">Focus on analytical skills and answer writing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-6">
+                        <a href="https://prayagiasacademy.com/contact/" class="inline-flex items-center text-brand-primary font-bold hover:text-brand-accent transition">
+                            Meet Our Faculty <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Director's Message Section -->
+    <section class="py-16 bg-brand-light border-y border-gray-200">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/3 flex flex-col items-center">
+                        <div class="relative">
+                            <div class="absolute inset-0 border-2 border-brand-accent rounded-lg transform translate-x-3 translate-y-3"></div>
+                            <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/IMG-20260104-WA0024-scaled.jpg" 
+                                 onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'"
+                                 alt="Director R.A. Khan" 
+                                 class="relative w-72 h-auto rounded-lg shadow-xl border-4 border-white z-10 bg-gray-100">
+                        </div>
+                        <div class="mt-6 text-center">
+                            <h3 class="font-serif text-xl font-bold text-brand-primary">Director – R.A. Khan</h3>
+                            <p class="text-sm text-gray-500 uppercase tracking-widest mt-1">Prayag IAS Academy</p>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 relative">
+                        <span class="text-6xl text-gray-200 font-serif absolute -top-8 -left-4">"</span>
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4">Empowering Dreams Since 2000</h4>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            "Welcome to Prayag IAS Academy. For over 25 years, our mission has been simple yet profound: to identify and nurture the leadership potential in every student. We don't just teach subjects; we mold characters. The journey to becoming a civil servant is demanding, but with our disciplined environment and expert guidance, we ensure that your hard work translates into success."
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            "I invite you to join our family and let us be the wind beneath your wings as you soar towards your goal of serving the nation."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="bg-brand-primary/5 text-brand-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Campus Life</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-4">Glimpses of Excellence</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Witness the vibrant academic atmosphere and moments of triumph at Prayag IAS Academy. Click on any image to enlarge.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/565232192_1228008659344162_2071864370069796108_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 1" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/529686703_1166585005486528_4012011701666662441_n-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 2" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/531169878_1166584985486530_8246368438731991453_n-1.jpg" onerror="this.src='https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 3" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/550900061_1202922098519485_5229557990772794448_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 4" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/555541435_31430030409974726_7154324853991556110_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 5" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/556892806_31430030373308063_305681244415309474_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 6" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/615419413_1299312715547089_3375953664029069621_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 7" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/615549672_1299312425547118_5963462826664734351_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 8" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div class="relative group overflow-hidden rounded-xl shadow-lg h-64 cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/IMG-20260104-WA0024-scaled.jpg" onerror="this.src='https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Gallery Image 9" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-brand-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-brand-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="bg-brand-primary/5 text-brand-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Our Advantages</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-4">Why Toppers Choose Prayag IAS</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition text-center group">
+                    <div class="w-16 h-16 bg-brand-primary text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-brand-accent transition">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Personalized Mentorship</h3>
+                    <p class="text-gray-600 text-sm">Every student is assigned a mentor to track progress, resolve doubts, and keep motivation high.</p>
+                </div>
+                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition text-center group">
+                    <div class="w-16 h-16 bg-brand-primary text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-brand-accent transition">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Updated Study Material</h3>
+                    <p class="text-gray-600 text-sm">Concise, relevant, and updated material tailored for the changing patterns of exams.</p>
+                </div>
+                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition text-center group">
+                    <div class="w-16 h-16 bg-brand-primary text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-4 group-hover:bg-brand-accent transition">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Answer Writing Focus</h3>
+                    <p class="text-gray-600 text-sm">Daily answer writing practice with evaluation by experts to master the art of mains examination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-50 relative">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="bg-brand-primary/5 text-brand-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Academic Programs</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-gray-900 mt-4">Expertly Designed Courses</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/559413857_1228008689344159_3031188000857857431_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="UPSC" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-serif text-xl font-bold">UPSC Foundation</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Comprehensive coverage of Prelims, Mains, and Interview.</p>
+                        <a href="https://prayagiasacademy.com/upsc/" class="block w-full py-2 bg-gray-50 text-brand-primary text-center rounded hover:bg-brand-primary hover:text-white transition font-bold text-sm">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover group ring-2 ring-brand-accent/20">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/529686703_1166585005486528_4012011701666662441_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="UKPCS" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute top-4 right-4 bg-brand-accent text-white text-xs font-bold px-2 py-1 rounded">STATE SPECIAL</div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-serif text-xl font-bold">UKPCS Preparation</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Specialized guidance for Uttarakhand State exams.</p>
+                        <a href="https://prayagiasacademy.com/pcs/" class="block w-full py-2 bg-brand-primary text-white text-center rounded hover:bg-black transition font-bold text-sm">Enroll Now</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden card-hover group">
+                    <div class="h-48 bg-gray-200 relative overflow-hidden">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/490239042_1072487644896265_303300284589942412_n.jpg" onerror="this.src='https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'" alt="Judiciary" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h3 class="absolute bottom-4 left-4 text-white font-serif text-xl font-bold">UKPCS (J) Judiciary</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Targeted preparation for Judiciary exams.</p>
+                        <a href="https://prayagiasacademy.com/ukpcs-j/" class="block w-full py-2 bg-gray-50 text-brand-primary text-center rounded hover:bg-brand-primary hover:text-white transition font-bold text-sm">Enroll Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20 bg-brand-primary text-white relative">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-white/10 rounded-full px-4 py-1 mb-2 border border-white/20 backdrop-blur-sm">
+                    <span class="text-brand-accent text-sm font-bold mr-2">4.8</span>
+                    <div class="flex text-yellow-400 text-xs">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <p class="text-gray-200 text-sm font-medium mb-4">300+ Genuine Google Reviews</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mt-2">Student Reviews</h2>
+                <div class="w-24 h-1 bg-brand-accent mx-auto mt-4 rounded"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg relative card-hover border-t-4 border-blue-500">
+                    <div class="absolute top-6 right-6">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/New-Google-Logo.jpg" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'" alt="Google" class="w-6 h-6">
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-3">V</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900">Vikas Singh</h4>
+                            <div class="flex text-yellow-400 text-xs items-center">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">"Prayag IAS Academy is undoubtedly the best coaching in Dehradun. R.A. Khan Sir's mentorship helped me clear my concepts."</p>
+                </div>
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg relative card-hover border-t-4 border-blue-500">
+                    <div class="absolute top-6 right-6">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/New-Google-Logo.jpg" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'" alt="Google" class="w-6 h-6">
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold mr-3">A</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900">Anjali Rawat</h4>
+                            <div class="flex text-yellow-400 text-xs items-center">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">"The environment here is very disciplined. I joined for the Judiciary batch and the faculty is exceptional."</p>
+                </div>
+                <div class="bg-white text-gray-800 p-6 rounded-xl shadow-lg relative card-hover border-t-4 border-blue-500">
+                    <div class="absolute top-6 right-6">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/New-Google-Logo.jpg" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'" alt="Google" class="w-6 h-6">
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold mr-3">S</div>
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-900">Saurabh Pant</h4>
+                            <div class="flex text-yellow-400 text-xs items-center">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">"Genuine guidance in Dehradun. Small batch size means you can actually talk to the teachers."</p>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://share.google/iMBlkdTEsOwcIPJgx" target="_blank" class="inline-flex items-center bg-white text-gray-700 px-6 py-3 rounded-full font-bold shadow-lg hover:shadow-xl hover:bg-gray-50 transition transform hover:-translate-y-1">
+                    <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/New-Google-Logo.jpg" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg'" alt="Google" class="w-5 h-5 mr-3">
+                    Read more reviews on Google
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="font-bold text-2xl text-brand-primary mb-8 font-serif">Latest News & Updates</h3>
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <a href="https://prayagiasacademy.com/blog/" class="block p-4 rounded-lg bg-gray-50 hover:bg-red-50 transition border border-gray-100">
+                    <span class="text-xs font-bold text-brand-accent uppercase">New Batch</span>
+                    <h4 class="font-bold text-brand-primary mt-1">UPSC Foundation 2026 Starting Soon</h4>
+                </a>
+                <a href="https://prayagiasacademy.com/blog/" class="block p-4 rounded-lg bg-gray-50 hover:bg-red-50 transition border border-gray-100">
+                    <span class="text-xs font-bold text-brand-primary uppercase">Result</span>
+                    <h4 class="font-bold text-brand-primary mt-1">UKPCS Mains Results Declared</h4>
+                </a>
+                <a href="https://prayagiasacademy.com/blog/" class="block p-4 rounded-lg bg-gray-50 hover:bg-red-50 transition border border-gray-100">
+                    <span class="text-xs font-bold text-green-600 uppercase">Event</span>
+                    <h4 class="font-bold text-brand-primary mt-1">Free Essay Writing Workshop</h4>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-brand-light">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl font-bold text-gray-900">FAQ</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="group bg-white rounded-lg shadow-sm border border-gray-100">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-gray-800">
+                        <span>Do you provide demo classes?</span>
+                        <span class="transition group-open:rotate-180 text-brand-primary"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-5 pb-5 text-sm">Yes, we offer 3 days of free demo classes for all our courses.</div>
+                </details>
+                <details class="group bg-white rounded-lg shadow-sm border border-gray-100">
+                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-gray-800">
+                        <span>What is the medium of instruction?</span>
+                        <span class="transition group-open:rotate-180 text-brand-primary"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-gray-600 px-5 pb-5 text-sm">We have separate batches for English Medium and Hindi Medium students.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-[#570916] text-gray-400 pt-16 pb-8 border-t border-brand-accent/20">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <img src="https://prayagiasacademy.com/wp-content/uploads/2026/01/cropped-prayag-ias-academy-logo-3-jpg.webp" onerror="this.src='https://via.placeholder.com/50x50'" alt="Logo" class="h-10 w-auto bg-white rounded p-1">
+                        <span class="text-white font-serif font-bold text-lg uppercase">Prayag IAS</span>
+                    </div>
+                    <p class="text-sm leading-relaxed mb-6">
+                        The most trusted name in Civil Services Coaching in Uttarakhand since 2000.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/prayagiasacademy/" target="_blank" class="w-8 h-8 bg-gray-800 hover:bg-brand-accent rounded flex items-center justify-center transition text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/prayag_ias_academy/" target="_blank" class="w-8 h-8 bg-gray-800 hover:bg-brand-accent rounded flex items-center justify-center transition text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCv0rnbEnMA84nImghmWKGlA" target="_blank" class="w-8 h-8 bg-gray-800 hover:bg-brand-accent rounded flex items-center justify-center transition text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-6">Get in Touch</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-brand-accent"></i>
+                            <span>40 Mansinghwala, Dehradun, Uttarakhand 248001</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3 text-brand-accent"></i>
+                            <span>+91 82796 90799</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-6">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="https://prayagiasacademy.com/about/" class="hover:text-brand-accent transition">About Us</a></li>
+                        <li><a href="https://prayagiasacademy.com/upsc/" class="hover:text-brand-accent transition">UPSC Foundation</a></li>
+                        <li><a href="https://prayagiasacademy.com/pcs/" class="hover:text-brand-accent transition">UKPCS Batch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-serif font-bold text-lg mb-6">Locate Us</h3>
+                    <div class="bg-gray-800 h-32 w-full rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3443.376829774577!2d78.04948067554904!3d30.340248874799044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c30e8f%3A0x75a6235cedeee0fe!2sPrayag%20IAS%20Academy!5e0!3m2!1sen!2sin!4v1714570000000!5m2!1sen!2sin" 
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Prayag IAS Academy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="closeLightbox()">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full Screen Image">
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => { menu.classList.toggle('hidden'); });
+
+        // Lightbox Functions
+        function openLightbox(src) {
+            const lightbox = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            img.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto'; 
+        }
+
+        // Hero Carousel Functionality - Works on BOTH desktop and mobile
+        const SLIDE_INTERVAL = 2500;
+        let currentSlide = 0;
+        const tracks = document.querySelectorAll('[data-carousel-track]');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = tracks.length ? tracks[0].children.length : 0;
+
+        function renderSlide() {
+            tracks.forEach(track => {
+                track.style.transform = 'translateX(-' + (currentSlide * 100) + '%)';
+            });
+            dots.forEach((dot, i) => {
+                if (i === currentSlide) {
+                    dot.classList.add('active');
+                    dot.classList.remove('bg-white/50');
+                    dot.classList.add('bg-white');
+                } else {
+                    dot.classList.remove('active');
+                    dot.classList.add('bg-white/50');
+                    dot.classList.remove('bg-white');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = (index + totalSlides) % totalSlides;
+            renderSlide();
+            resetInterval();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            renderSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            renderSlide();
+        }
+
+        // Initialize first position and start auto-scroll
+        renderSlide();
+        let slideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+        }
+        
+        // Pause auto-rotation when user hovers (desktop only)
+        const heroSection = document.getElementById('home');
+        heroSection.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        heroSection.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+        });
+
+        // Touch swipe support for mobile
+        document.querySelectorAll('[data-carousel-swipe]').forEach(viewport => {
+            let startX = 0;
+            viewport.addEventListener('touchstart', e => {
+                startX = e.touches[0].clientX;
+                clearInterval(slideInterval);
+            }, { passive: true });
+            viewport.addEventListener('touchend', e => {
+                const diff = e.changedTouches[0].clientX - startX;
+                if (Math.abs(diff) > 40) {
+                    if (diff < 0) nextSlide(); else prevSlide();
+                }
+                slideInterval = setInterval(nextSlide, SLIDE_INTERVAL);
+            }, { passive: true });
+        });
+        // Daily Current Affairs - auto-fetched feed, refreshes at midnight IST
+        const CA_FEED_URL = 'https://kjassi435.github.io/PRAYAG-IAS/data/latest.json';
+        const caList = document.getElementById('ca-list');
+        const caBadge = document.getElementById('ca-date-badge');
+        let caLoadedDate = null;
+
+        function escapeHTML(str) {
+            return String(str || '').replace(/[&<>"']/g, c => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[c]));
+        }
+
+        function istDateString() {
+            return new Intl.DateTimeFormat('en-CA', {
+                timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit'
+            }).format(new Date());
+        }
+
+        function formatCADate(isoDate) {
+            try {
+                return new Intl.DateTimeFormat('en-IN', {
+                    timeZone: 'Asia/Kolkata', weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+                }).format(new Date(isoDate + 'T12:00:00+05:30'));
+            } catch (e) {
+                return isoDate;
+            }
+        }
+
+        function showCASkeleton() {
+            caList.innerHTML = '';
+            for (let i = 0; i < 10; i++) {
+                const li = document.createElement('li');
+                li.className = 'py-3';
+                const row = document.createElement('div');
+                row.className = 'ca-skeleton';
+                li.appendChild(row);
+                caList.appendChild(li);
+            }
+        }
+
+        function renderCA(data, isSample) {
+            caLoadedDate = data.date || istDateString();
+            caBadge.innerHTML = '<i class="fas fa-calendar-day mr-2 text-brand-accent"></i><span>' +
+                formatCADate(caLoadedDate) + '</span>';
+            document.getElementById('ca-sample-note').classList.toggle('hidden', !isSample);
+
+            caList.innerHTML = data.items.map((item, i) => {
+                const hiBlock = (item.title_hi && item.title_hi !== item.title_en) || item.detail_hi
+                    ? `<div class="border-l-4 border-brand-accent/60 bg-orange-50/60 rounded-r-lg pl-4 pr-3 py-3">` +
+                      (item.title_hi && item.title_hi !== item.title_en
+                          ? `<p lang="hi" class="font-bold text-gray-800 mb-1">${escapeHTML(item.title_hi)}</p>` : '') +
+                      (item.detail_hi
+                          ? `<p lang="hi" class="text-gray-700 text-sm md:text-base leading-relaxed">${escapeHTML(item.detail_hi)}</p>` : '') +
+                      `</div>`
+                    : '';
+                return `
+                <li>
+                    <details class="group">
+                        <summary class="flex items-start gap-4 py-4 cursor-pointer select-none list-none">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-primary text-brand-accent font-bold text-sm flex items-center justify-center mt-0.5">${i + 1}</span>
+                            <span class="flex-1 min-w-0">
+                                <span class="block font-semibold text-gray-800 leading-snug group-open:text-brand-primary transition">${escapeHTML(item.title_en)}</span>
+                                <span class="block text-xs text-gray-400 mt-1"><i class="fas fa-newspaper mr-1"></i>${escapeHTML(item.source)} &bull; tap to read in English &amp; Hindi</span>
+                            </span>
+                            <i class="fas fa-chevron-down text-brand-accent mt-2 flex-shrink-0 transition-transform duration-300 group-open:rotate-180"></i>
+                        </summary>
+                        <div class="pb-6 pt-2 pl-12 pr-2 space-y-4">
+                            ${item.detail_en ? `<p class="text-gray-600 text-sm md:text-base leading-relaxed">${escapeHTML(item.detail_en)}</p>` : ''}
+                            ${hiBlock}
+                            ${item.url ? `<a href="${escapeHTML(item.url)}" target="_blank" rel="noopener" class="inline-flex items-center text-brand-primary font-bold text-sm hover:text-brand-accent transition">Read full source <i class="fas fa-arrow-right ml-2"></i></a>` : ''}
+                        </div>
+                    </details>
+                </li>`;
+            }).join('');
+        }
+
+        function renderCAError() {
+            caBadge.innerHTML = '<i class="fas fa-triangle-exclamation mr-2 text-yellow-300"></i><span>Updates unavailable</span>';
+            caList.innerHTML = `
+                <li class="py-10 text-center">
+                    <i class="fas fa-wifi text-3xl text-gray-300 mb-4"></i>
+                    <p class="text-gray-500 font-medium mb-1">Current affairs could not be loaded.</p>
+                    <p class="text-gray-400 text-sm">Please check your internet connection or try refreshing the page.</p>
+                </li>`;
+        }
+
+        function loadCurrentAffairs() {
+            showCASkeleton();
+            fetch(CA_FEED_URL + '?t=' + Date.now())
+                .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+                .then(data => {
+                    if (!data.items || !data.items.length) throw new Error('empty feed');
+                    renderCA(data, !!data.sample);
+                })
+                .catch(() =>
+                    fetch('./data/latest.json?t=' + Date.now())
+                        .then(res => { if (!res.ok) throw new Error('HTTP ' + res.status); return res.json(); })
+                        .then(data => {
+                            if (!data.items || !data.items.length) throw new Error('empty feed');
+                            renderCA(data, true);
+                        })
+                        .catch(renderCAError)
+                );
+        }
+
+        loadCurrentAffairs();
+
+        // Re-fetch automatically when the date rolls over at midnight IST
+        setInterval(() => {
+            if (caLoadedDate && istDateString() !== caLoadedDate) loadCurrentAffairs();
+        }, 30000);
+    </script>
+
+</div>
+
+</body>
+</html>
